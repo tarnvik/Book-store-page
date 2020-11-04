@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sidepanel {
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.smallMainMeny{
+    background-color: whitesmoke;
+}
+
+.mainMeny{
+    background-color: whitesmoke;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+  .smallMainMeny {
+    display: flex;
+  }
+
+  .mainMeny {
+    display: hidden;
+  }
+}
+/* desktop */
+@media screen and (min-width: 980px) {
+  .smallMainMeny {
+    display: hidden;
+  }
+
+  .mainMeny {
+    display: flex;
+  }
+}
