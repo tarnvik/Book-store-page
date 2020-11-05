@@ -19,28 +19,23 @@
 </script>
 
 <body>
-  <header>
-    <div>
-      <div>
-        <a href="index.html">KLACKENBERG</a>
-        <a href="index.html">BÖCKER&PAPPER</a>
-      </div>
-      <div>
-        <a href="">Kundtjänst</a>
-        <a href="">Mina sidor</a>
-        <a href="">Kundvagn</a>
-      </div>
-      <p>Sök</p>
+  <header class="gridContainer">
+    <a href="index.html" class="logaTopp">KLACKENBERG</a>
+    <a href="index.html" class="logaBotten">BÖCKER&PAPPER</a>
+    <div class="smallMeny">
+      <a href="">Kundtjänst</a>
+      <a href="">Mina sidor</a>
+      <a href="">Kundvagn</a>
     </div>
-    <div class="mainMeny">
-      <nav>
-        <a href="">Böcker</a>
-        <a href="">Papper</a>
-        <a href="">Topplistor</a>
-        <a href="">Butiker och öppettider</a>
-        <a href="">Bli medlem</a>
-      </nav>
-    </div>
+    <p class="sök">Sök</p>
+    <nav class="mainMeny">
+      <a href="">Böcker</a>
+      <a href="">Papper</a>
+      <a href="">Topplistor</a>
+      <a href="">Butiker och öppettider</a>
+      <a href="">Evenemang</a>
+      <a href="">Bli medlem</a>
+    </nav>
     <div class="smallMainMeny">
       <nav id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -48,9 +43,10 @@
         <a href="">Papper</a>
         <a href="">Topplistor</a>
         <a href="">Butiker och öppettider</a>
+        <a href="">Evenemang</a>
         <a href="">Bli medlem</a>
       </nav>
-      <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button>
+      <button class="openbtn" onclick="openNav()">☰</button>
     </div>
   </header>
   <main></main>

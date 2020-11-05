@@ -1,6 +1,62 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template: 2.5vw 1fr 1fr 2.5vw 1fr / 2.5vw 20px 1fr 2fr 2.5vw;
+}
+
+.smallMeny {
+  grid-column: 3 / 5;
+  grid-row: 2/3;
+  justify-self: end;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  margin-bottom: 2.5vw;
+  width: 30%;
+}
+
+.logaTopp {
+  grid-column: 2 / 4;
+  grid-row: 2/3;
+  border-style: solid;
+  font-size: 3rem;
+  justify-self: center;
+  padding-left: 21.5px;
+  padding-right: 21.5px;
+}
+
+.logaBotten {
+  grid-column: 2 / 4;
+  grid-row: 3/4;
+  background-color: gray;
+  font-size: 3rem;
+  justify-self: center;
+}
+
+.mainMeny {
+  grid-column: 1 / 6;
+  grid-row: 5/6;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: gray;
+}
+
+.smallMainMeny {
+  grid-column: 1 / 3;
+  grid-row: 5/6;
+}
+
+.sök {
+  background-color: lightgray;
 }
 
 .sidepanel {
@@ -13,31 +69,43 @@
   width: 100vw;
 }
 
-.smallMainMeny{
-    background-color: whitesmoke;
-}
-
-.mainMeny{
-    background-color: whitesmoke;
-}
-
 /* Mobile */
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 450px) {
   .smallMainMeny {
     display: flex;
   }
 
   .mainMeny {
-    display: hidden;
+    display: none;
+  }
+
+  .sök {
+    grid-column: 3 / 6;
+    grid-row: 5/6;
+  }
+
+  .smallMeny {
+    flex-direction: column;
   }
 }
 /* desktop */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 450px) {
   .smallMainMeny {
-    display: hidden;
+    display: none;
   }
 
   .mainMeny {
     display: flex;
+  }
+
+  .sök {
+    grid-column: 4 / 6;
+    grid-row: 3/4;
+    justify-self: end;
+    padding: 1%;
+    padding-right: 60%;
+    padding-left: 2.5vw;
+    align-self: center;
+    border-style: solid;
   }
 }
