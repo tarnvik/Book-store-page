@@ -17,178 +17,118 @@ Dark Green
   padding: 0;
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Manuale", serif;
   border: none;
   list-style: none;
 }
 
-footer {
+header {
   display: grid;
-  grid-template: 2vw auto 2vw / 2vw 3fr 3fr 3fr 1fr 2vw;
+  grid-template: auto / 1fr 1fr 1fr;
 }
 
-.mainMeny {
-  grid-column: 1 / 6;
-  grid-row: 5/6;
+a {
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bigLink {
+  font-family: "Rosario", sans-serif;
+  font-size: 1.2rem;
+  padding: 15px;
+  color: white;
+}
+
+.bigLink:hover {
+  background-color: white;
+  color: #69747c;
+  text-decoration: none;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  grid-row: 1/3;
+  text-align: center;
+}
+
+.topLogo {
+  border-style: solid;
+  border-width: 4px;
+  color: #084411;
+}
+
+.bottomLogo {
+  background-color: #084411;
+  color: white;
+}
+
+.searchBar {
+  grid-column: 2/4;
+  background-color: lightgray;
+  margin: 0px 30px 30px 30px;
+  border-style: solid;
+  border-width: 2px;
+  align-self: center;
+  padding: 10px 0 10px 10px;
+  font-size: 1.2rem;
+}
+
+.smallMenu {
+  grid-column: 3/4;
+  margin: 30px 30px 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 5px;
+}
+
+.bigMenu {
+  grid-column: 1/4;
+  align-self: center;
   display: flex;
   justify-content: space-around;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  background-color: gray;
-}
-
-.smallMainMeny {
-  grid-column: 1 / 3;
-  grid-row: 5/6;
-}
-
-.sök {
-  background-color: lightgray;
+  background-color: #69747c;
 }
 
 .sidepanel {
   overflow-x: hidden;
   position: fixed;
   z-index: 1;
-  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  width: 100vw;
 }
 
 /* Mobile */
 @media screen and (max-width: 450px) {
-  .smallMainMeny {
+  .mobileMenu,
+  .openBtn {
     display: flex;
   }
 
-  .mainMeny {
+  .bigMenu {
     display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template: 16px auto auto 16px auto / 16px 20px 1.5fr 1fr 16px;
-  }
-
-  .topLogo {
-    grid-column: 2 / 4;
-    grid-row: 2/3;
-    border-style: solid;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-    margin-right: auto;
-    padding-left: 8.5px;
-    padding-right: 10.5px;
-  }
-
-  .bottomLogo {
-    grid-column: 2 / 4;
-    grid-row: 3/4;
-    background-color: gray;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-    margin-right: auto;
-    padding-left: 2px;
-    padding-right: 4px;
-  }
-
-  .smallMeny {
-    grid-column: 4 / 5;
-    grid-row: 2/4;
-    justify-self: end;
-    display: flex;
-    justify-content: space-between;
-    background-color: gray;
-    margin: 0px, 0px, 16px, 16px;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .openbtn {
-    grid-column: 1 / 3;
-    grid-row: 5/6;
-    font-size: 1.2rem;
-    font-weight: bolder;
-  }
-
-  .sök {
-    grid-column: 3 / 6;
-    grid-row: 5/6;
   }
 }
 
 /* desktop */
 @media screen and (min-width: 450px) {
-  .smallMainMeny,
-  .openbtn {
+  .mobileMenu,
+  .openBtn {
     display: none;
   }
 
-  .mainMeny {
+  .bigMenu {
     display: flex;
-  }
-
-  .sök {
-    grid-column: 4 / 6;
-    grid-row: 3/4;
-    justify-self: end;
-    align-self: center;
-    border-style: solid;
-  }
-
-  header {
-    display: grid;
-    grid-template: 30px auto auto 30px auto / 30px 1fr 1fr 1fr 30px;
-  }
-
-  .topLogo {
-    grid-column: 2 / 4;
-    grid-row: 2/3;
-    border-style: solid;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: bold;
-    margin-right: auto;
-    padding-left: 11px;
-    padding-right: 13px;
-  }
-
-  .bottomLogo {
-    grid-column: 2 / 4;
-    grid-row: 3/4;
-    background-color: gray;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: bold;
-    margin-right: auto;
-    padding-left: 2px;
-    padding-right: 4px;
-  }
-
-  .smallMeny {
-    grid-column: 4 / 5;
-    grid-row: 2/3;
-    justify-self: end;
-    align-self: center;
-    display: flex;
-    justify-content: space-between;
-    background-color: gray;
-    margin: 0px, 0px, 30px, 0px;
-  }
-
-  .smallMeny a {
-    padding: 16px 30px 16px 30px;
-  }
-
-  .openbtn {
-    grid-column: 1 / 3;
-    grid-row: 5/6;
-    font-size: 1.2rem;
-    font-weight: bolder;
   }
 }
