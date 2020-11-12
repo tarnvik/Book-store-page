@@ -32,18 +32,18 @@ a {
   font-weight: bold;
 }
 
-footer{
+footer {
   display: grid;
   grid-template: auto / 1fr 1fr 1fr auto;
 }
 
-.stycke{
+.stycke {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
 }
 
-h3{
+h3 {
   font-size: 1.2rem;
 }
 
@@ -56,6 +56,10 @@ a:hover {
   font-size: 1.2rem;
   padding: 15px;
   color: #084411;
+}
+
+.bigMenu .bigLink {
+  color: white;
 }
 
 .bigLink:hover {
@@ -117,8 +121,38 @@ a:hover {
   background-color: #084411;
 }
 
-.bigMenu .bigLink {
-  color: white;
+.slideShow {
+  display: flex;
+  justify-content: center;
+  margin: 2vw;
+}
+
+.slideShow img {
+  width: 90%;
+}
+
+.books {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
+}
+
+.book {
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.books img {
+  width: 10vw;
+}
+
+.books .buyBtn {
+  width: 10vw;
+}
+
+.books .buyBtn:hover {
+  cursor: pointer;
 }
 
 /* Mobile */
