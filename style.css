@@ -122,13 +122,33 @@ a:hover {
 }
 
 .slideShow {
+  margin: 2vw;
   display: flex;
   justify-content: center;
-  margin: 2vw;
+  align-items: center;
 }
 
-.slideShow img {
-  width: 90%;
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.prev:hover, .next:hover {
+  text-decoration: none;
+}
+
+.prev{
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.slide img{
+  width: 90vw;
 }
 
 .books {

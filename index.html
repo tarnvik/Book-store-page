@@ -19,6 +19,31 @@
   }
 </script>
 
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
+
+
 <body>
   <header>
     <div class="logo">
@@ -57,46 +82,65 @@
   </header>
   <main>
     <div class="slideShow">
-      <img src="https://picsum.photos/1000/300" alt="Bara en random bild men det ska vara ett erbjudande" />
+      <div class="slide">
+        <img src="https://picsum.photos/1000/300" alt="Bara en random bild men det ska vara ett erbjudande" />
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/1000/302" alt="">
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/1000/301" alt="Bara en random bild men det ska vara ett erbjudande" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
     </div>
+
     <h2>Topplistan</h2>
     <div class="books">
       <div class="book">
-        <a href="book.html"><img src="Book.jpg" alt="Six of crows bokomslag"></a>
-        <a href="book.html">Six of crows</a>
-        <a href="book.html">Leigh Bardugo</a>
-        <button class="buyBtn">129kr</button>
+        <a href="book.html"><img src="https://picsum.photos/150/250" alt="Bara en random bild men det ska vara ett bokomslag"></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
       </div>
       <div class="book">
-        <a href="book.html"><img src="Book.jpg" alt="Six of crows bokomslag"></a>
-        <a href="book.html">Six of crows</a>
-        <a href="book.html">Leigh Bardugo</a>
-        <button class="buyBtn">129kr</button>
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag"></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
       </div>
       <div class="book">
-        <a href="book.html"><img src="Book.jpg" alt="Six of crows bokomslag"></a>
-        <a href="book.html">Six of crows</a>
-        <a href="book.html">Leigh Bardugo</a>
-        <button class="buyBtn">129kr</button>
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag"></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
       </div>
       <div class="book">
-        <a href="book.html"><img src="Book.jpg" alt="Six of crows bokomslag"></a>
-        <a href="book.html">Six of crows</a>
-        <a href="book.html">Leigh Bardugo</a>
-        <button class="buyBtn">129kr</button>
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag"></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
       </div>
       <div class="book">
-        <a href="book.html"><img src="Book.jpg" alt="Six of crows bokomslag"></a>
-        <a href="book.html">Six of crows</a>
-        <a href="book.html">Leigh Bardugo</a>
-        <button class="buyBtn">129kr</button>
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag"></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
       </div>
       <div class="book">
-        <a href="book.html"><img src="Book.jpg" alt="Six of crows bokomslag"></a>
-        <a href="book.html">Six of crows</a>
-        <a href="book.html">Leigh Bardugo</a>
-        <button class="buyBtn">129kr</button>
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag"></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
       </div>
+
     </div>
   </main>
   <footer>
