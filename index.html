@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klackenberg böcker & papper</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manuale&family=Rosario&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <div class="logo column">
-        <a href="index.html" class="top">KLACKENBERGS</a>
-        <a href="index.html" class="bottom">BÖCKER&PAPPER</a>
-      </div>
-      <div class="smallMenu">
-        <a href="">Kundtjänst</a>
-        <a href="">Mina sidor</a>
-        <a href="">Kundvagn</a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klackenberg böcker & papper</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manuale&family=Rosario&display=swap" rel="stylesheet" />
+</head>
 
-      <input
-        class="searchBar"
-        placeholder="Sök (titlar, författare, ämnen...)"
-      />
+<body>
+  <header>
+    <div class="logo column">
+      <a href="index.html" class="top">KLACKENBERGS</a>
+      <a href="index.html" class="bottom">BÖCKER&PAPPER</a>
+    </div>
+    <div class="smallMenu spaceBetween">
+      <a href="">Kundtjänst</a>
+      <a href="">Mina sidor</a>
+      <a href="">Kundvagn</a>
+    </div>
 
-      <nav class="bigMenu">
+    <input class="searchBar" placeholder="Sök (titlar, författare, ämnen...)" />
+
+    <nav class="bigMenu spaceAround">
+      <a href="" class="bigLink">Böcker</a>
+      <a href="" class="bigLink">Papper</a>
+      <a href="" class="bigLink">Topplistor</a>
+      <a href="" class="bigLink">Butiker och öppettider</a>
+      <a href="" class="bigLink">Evenemang</a>
+      <a href="" class="bigLink">Bli medlem</a>
+    </nav>
+
+    <div class="mobileMenu">
+      <nav id="sidepanel" class="sidepanel column">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="" class="bigLink">Böcker</a>
         <a href="" class="bigLink">Papper</a>
         <a href="" class="bigLink">Topplistor</a>
@@ -36,262 +42,200 @@
         <a href="" class="bigLink">Evenemang</a>
         <a href="" class="bigLink">Bli medlem</a>
       </nav>
+    </div>
+    <button class="openBtn" onclick="openNav()">☰</button>
+    <script>
+      function openNav() {
+        document.getElementById("sidepanel").style.width = "100vw";
+      }
 
-      <div class="mobileMenu">
-        <nav id="sidepanel" class="sidepanel">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >×</a
-          >
-          <a href="" class="bigLink">Böcker</a>
-          <a href="" class="bigLink">Papper</a>
-          <a href="" class="bigLink">Topplistor</a>
-          <a href="" class="bigLink">Butiker och öppettider</a>
-          <a href="" class="bigLink">Evenemang</a>
-          <a href="" class="bigLink">Bli medlem</a>
-        </nav>
-      </div>
-      <button class="openBtn" onclick="openNav()">☰</button>
-      <script>
-        function openNav() {
-          document.getElementById("sidepanel").style.width = "100vw";
+      function closeNav() {
+        document.getElementById("sidepanel").style.width = "0";
+      }
+    </script>
+
+  </header>
+  <main class="first-page">
+    <div class="slideShow center">
+      <img class="slide" src="images/erbjudande-pocket.jpg" alt="Erbjudande för alla pocket böcker, 3 för 2" />
+      <img class="slide" src="images/erbjudande-jul.jpg" alt="Erbjudande för julklappar" />
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusSlides(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        if (n > x.length) {
+          slideIndex = 1;
         }
-
-        function closeNav() {
-          document.getElementById("sidepanel").style.width = "0";
+        if (n < 1) {
+          slideIndex = x.length;
         }
-      </script>
-
-    </header>
-    <main class="first-page">
-      <div class="slideShow">
-        <img
-          class="slide"
-          src="images/erbjudande-pocket.jpg"
-          alt="Erbjudande för alla pocket böcker, 3 för 2"
-        />
-        <img
-          class="slide"
-          src="images/erbjudande-jul.jpg"
-          alt="Erbjudande för julklappar"
-        />
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-
-      <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusSlides(n) {
-          showDivs((slideIndex += n));
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
         }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
 
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("slide");
-          if (n > x.length) {
-            slideIndex = 1;
-          }
-          if (n < 1) {
-            slideIndex = x.length;
-          }
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          x[slideIndex - 1].style.display = "block";
-        }
-      </script>
+    <h2>Topplistan</h2>
 
-      <h2>Topplistan</h2>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <h2>Personalen tipsar</h2>
+    <div class="personal-tips">
+      <div class="book">
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
+      </div>
+      <div>
+        <p>"VILKEN NICE BOK"</p>
+        <p>Berit från Borås</p>
+        <p>Läs mer...</p>
+      </div>
+    </div>
+    <div class="personal-tips">
+      <div class="book">
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
+      </div>
+      <div>
+        <p>"VILKEN NICE BOK"</p>
+        <p>Berit från Borås</p>
+        <p>Läs mer...</p>
+      </div>
+    </div>
+    <div class="personal-tips">
+      <div class="book">
+        <a href="book.html"><img src="https://picsum.photos/150/250"
+            alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+        <a href="book.html">titel</a>
+        <a href="book.html">Författare</a>
+        <button class="buyBtn">Pris (IKON)</button>
+      </div>
+      <div>
+        <p>"VILKEN NICE BOK"</p>
+        <p>Berit från Borås</p>
+        <p>Läs mer...</p>
+      </div>
+    </div>
+    <h2>Topplistan</h2>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+    <div class="book">
+      <a href="book.html"><img src="https://picsum.photos/150/250"
+          alt="Bara en random bild men det ska vara ett bokomslag" /></a>
+      <a href="book.html">titel</a>
+      <a href="book.html">Författare</a>
+      <button class="buyBtn">Pris (IKON)</button>
+    </div>
+  </main>
+  <footer>
+    <div class="stycke">
+      <a href="">KLACKENBERGS</a>
+      <a href="">BÖCKER & PAPPER</a>
+    </div>
+    <div class="stycke">
+      <h3>Om oss</h3>
+      <a href="">Butiker</a>
+      <a href="">Hållbarhet</a>
+      <a href="">Jobba hos oss</a>
+      <a href="">Press</a>
+    </div>
+    <div class="stycke">
+      <h3>Kundtjänst</h3>
+      <a href="">Kontakt</a>
+      <a href="">Frakt information</a>
+      <a href="">Köpvillkor</a>
+      <a href="">Vanliga frågor och svar</a>
+    </div>
+    <div class="stycke">
+      <a href="">IKON</a>
+      <a href="">IKON</a>
+    </div>
+  </footer>
+</body>
 
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <h2>Personalen tipsar</h2>
-      <div class="personal-tips">
-        <div class="book">
-          <a href="book.html"
-            ><img
-              src="https://picsum.photos/150/250"
-              alt="Bara en random bild men det ska vara ett bokomslag"
-          /></a>
-          <a href="book.html">titel</a>
-          <a href="book.html">Författare</a>
-          <button class="buyBtn">Pris (IKON)</button>
-        </div>
-        <div>
-          <p>"VILKEN NICE BOK"</p>
-          <p>Berit från Borås</p>
-          <p>Läs mer...</p>
-        </div>
-      </div>
-      <div class="personal-tips">
-        <div class="book">
-          <a href="book.html"
-            ><img
-              src="https://picsum.photos/150/250"
-              alt="Bara en random bild men det ska vara ett bokomslag"
-          /></a>
-          <a href="book.html">titel</a>
-          <a href="book.html">Författare</a>
-          <button class="buyBtn">Pris (IKON)</button>
-        </div>
-        <div>
-          <p>"VILKEN NICE BOK"</p>
-          <p>Berit från Borås</p>
-          <p>Läs mer...</p>
-        </div>
-      </div>
-      <div class="personal-tips">
-        <div class="book">
-          <a href="book.html"
-            ><img
-              src="https://picsum.photos/150/250"
-              alt="Bara en random bild men det ska vara ett bokomslag"
-          /></a>
-          <a href="book.html">titel</a>
-          <a href="book.html">Författare</a>
-          <button class="buyBtn">Pris (IKON)</button>
-        </div>
-        <div>
-          <p>"VILKEN NICE BOK"</p>
-          <p>Berit från Borås</p>
-          <p>Läs mer...</p>
-        </div>
-      </div>
-      <h2>Topplistan</h2>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-      <div class="book">
-        <a href="book.html"
-          ><img
-            src="https://picsum.photos/150/250"
-            alt="Bara en random bild men det ska vara ett bokomslag"
-        /></a>
-        <a href="book.html">titel</a>
-        <a href="book.html">Författare</a>
-        <button class="buyBtn">Pris (IKON)</button>
-      </div>
-    </main>
-    <footer>
-      <div class="stycke">
-        <a href="">KLACKENBERGS</a>
-        <a href="">BÖCKER & PAPPER</a>
-      </div>
-      <div class="stycke">
-        <h3>Om oss</h3>
-        <a href="">Butiker</a>
-        <a href="">Hållbarhet</a>
-        <a href="">Jobba hos oss</a>
-        <a href="">Press</a>
-      </div>
-      <div class="stycke">
-        <h3>Kundtjänst</h3>
-        <a href="">Kontakt</a>
-        <a href="">Frakt information</a>
-        <a href="">Köpvillkor</a>
-        <a href="">Vanliga frågor och svar</a>
-      </div>
-      <div class="stycke">
-        <a href="">IKON</a>
-        <a href="">IKON</a>
-      </div>
-    </footer>
-  </body>
 </html>
