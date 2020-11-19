@@ -10,6 +10,8 @@ Light Green
 
 Dark Green
 #084411
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 */
 
 * {
@@ -32,23 +34,18 @@ header {
 footer {
   display: grid;
   grid-template: auto / 1fr 1fr 1fr auto;
-  background-color: #8ACB88;
+  background-color: #8acb88;
   padding: 2vw;
+  margin-top: 2vw;
 }
 
-footer .column p{
+footer .column p {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-footer .column a
- {
+footer .column a {
   font-weight: normal;
-}
-
-.first-page {
-  display: grid;
-  grid-template: auto / repeat(6, 1fr);
 }
 
 a {
@@ -180,7 +177,6 @@ footer .logo a {
 
 .slideShow {
   margin: 2vw;
-  grid-column: 1/7;
 }
 
 .prev,
@@ -208,14 +204,47 @@ footer .logo a {
   width: 85vw;
 }
 
-h2 {
+.toplist{
   grid-column: 1/7;
   margin: 2vw, 2vw, 2vw, 0;
-  padding: 1vw;
-  background-color: lightgray;
+  padding: 1.5vw;
+  color: white;
+  background-color: #084411;
+  font-family: 'Rosario', sans-serif;
+  font-size: 1.2rem;
 }
 
-.personal-tips {
+.books {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.book {
+  margin: 2vw;
+}
+
+.book img {
+  width: 100%;
+}
+
+.title {
+  font-family: "Rosario", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.buyBtn {
+  width: 100%;
+  padding: 0.5vw;
+  border-radius: 10px;
+  background-color: #8acb88;
+}
+
+.author {
+  font-weight: normal;
+}
+
+.tips {
   grid-column-end: span 2;
 }
 
@@ -225,6 +254,12 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
+  .books{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  }
+
   .smallMenu {
     grid-column: 2/4;
     justify-content: space-around;
@@ -249,7 +284,7 @@ h2 {
     grid-template: auto/1fr 1fr;
   }
 
-  footer .logo{
+  footer .logo {
     grid-column: 1 / span 2;
     justify-self: auto;
   }
@@ -308,5 +343,9 @@ h2 {
 
   .bigLink {
     color: #084411;
+  }
+  .bigLink:hover{
+    background: white;
+
   }
 }

@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klackenberg böcker & papper</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Rosario:wght@500;700&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo column">
+            <a href="index.html" class="top">KLACKENBERGS</a>
+            <a href="index.html" class="bottom">BÖCKER&PAPPER</a>
+        </div>
+
+        <div class="smallMenu spaceBetween">
+            <a href="">Kundtjänst</a>
+            <a href="">Mina sidor<i class="fas fa-user"></i></a>
+            <a href="">Kundvagn<i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <input class="searchBar" placeholder="Sök (titlar, författare, ämnen...)" type="search" />
+
+
+        <nav class="bigMenu spaceAround">
+            <button class="dropBtn bigLink" onclick="dropdown()">Böcker</button>
+            <div class="dropdownContent" id="dropdown">
+                <p>Ämnen</p>
+                <a href="category.html" class="bigLink">Ungdom</a>
+                <p>Egentligen ska det vara fler kategorier här...</p>
+            </div>
+            <a href="" class="bigLink">Papper</a>
+            <a href="" class="bigLink">Topplistor</a>
+            <a href="stores.html" class="bigLink">Butiker och öppettider</a>
+            <a href="" class="bigLink">Evenemang</a>
+            <a href="" class="bigLink">Bli medlem</a>
+        </nav>
+
+        <script>
+            function dropdown() {
+                document.getElementById("dropdown").classList.toggle("column");
+            }
+            window.onclick = function (e) {
+                if (!e.target.matches(".dropBtn")) {
+                    var myDropdown = document.getElementById("dropdown");
+                    if (myDropdown.classList.contains("column")) {
+                        myDropdown.classList.remove("column");
+                    }
+                }
+            };
+        </script>
+
+        <div class="mobileMenu">
+            <nav id="sidepanel" class="sidepanel column">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="" class="bigLink">Böcker</a>
+                <a href="category.html" class="bigLink">Ungdom</a>
+                <a href="" class="bigLink">Papper</a>
+                <a href="" class="bigLink">Topplistor</a>
+                <a href="stores.html" class="bigLink">Butiker och öppettider</a>
+                <a href="" class="bigLink">Evenemang</a>
+                <a href="" class="bigLink">Bli medlem</a>
+            </nav>
+        </div>
+        <button class="openBtn center" onclick="openNav()">☰</button>
+
+        <script>
+            function openNav() {
+                document.getElementById("sidepanel").style.width = "100vw";
+            }
+
+            function closeNav() {
+                document.getElementById("sidepanel").style.width = "0";
+            }
+        </script>
+    </header>
+
+    <main class="">
+    </main>
+    <footer>
+        <div class="column logo">
+            <a href="#" class="top">KLACKENBERGS</a>
+            <a href="#" class="bottom">BÖCKER & PAPPER</a>
+        </div>
+        <div class="column">
+            <p>Om oss</p>
+            <a href="">Butiker</a>
+            <a href="">Hållbarhet</a>
+            <a href="">Jobba hos oss</a>
+            <a href="">Press</a>
+        </div>
+        <div class="column">
+            <p>Kundtjänst</p>
+            <a href="">Kontakt</a>
+            <a href="">Frakt information</a>
+            <a href="">Köpvillkor</a>
+            <a href="">Vanliga frågor och svar</a>
+        </div>
+        <div class="column">
+            <p>Följ oss</p>
+            <a href="https://www.instagram.com/klackenbergsvarmdo/?hl=sv"><i
+                    class="fab fa-instagram-square"></i>Instagram</a>
+            <a
+                href="https://www.facebook.com/klackenbergsvarmdo/?hc_ref=ARQJJ3b0lTfEgjlpxh5wPK6ThfGRYDz0MYFkT__IaAQhqNZ8p0ih3qm9nLhreyDQ4Gc&fref=nf&__tn__=kC-R"><i
+                    class="fab fa-facebook-square"></i>Facebook
+            </a>
+        </div>
+    </footer>
 </body>
+
 </html>
