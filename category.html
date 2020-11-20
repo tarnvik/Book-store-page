@@ -82,9 +82,10 @@
         </script>
     </header>
 
-    <main>
-        <h1>Ungdomsböcker</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, atque corrupti tempore ipsa molestiae tempora
+    <main class="category">
+        <h1 class="bigHeading">Ungdomsböcker</h1>
+        <p class="normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, atque corrupti tempore ipsa
+            molestiae tempora
             cupiditate! Reiciendis sed totam dolores assumenda sit odio excepturi incidunt! At, possimus laborum
             provident molestiae omnis sequi facilis error quo iusto? Porro beatae fugiat esse rerum, repudiandae culpa,
             in minus suscipit facere minima dolores! Eaque, fuga! Alias dolorum minima quasi corrupti quia suscipit
@@ -92,87 +93,156 @@
             sequi, numquam quidem deserunt ad iste molestiae incidunt animi culpa tenetur vero inventore quas tempora,
             dolorum aliquid deleniti eligendi laborum! Magni iusto porro sequi animi amet voluptatum perferendis
             distinctio sapiente laborum.</p>
-        <div>
-            <input type="search" placeholder="Sök(I kategori)">
-            <button>Filtrera <i class="fas fa-sort-down"></i>
+        <div class="toplist spaceBetween">
+            <input class="searchBar" placeholder="Sök(I kategori)">
+            <button class="searchBar">Filtrera <i class="fas fa-sort-down"></i>
             </button>
         </div>
-        <div>
-            <div class="stores">
+        <div class="categoryGrid">
+            <div class="column toplist categoryToplist">
+                <h2 class="heading">Topplista</h2>
+                <div class="toplistBooks">
+                    <div class="book flex center">
+                        <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                                alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                        <div class="column">
+                            <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                            <p class="underline">Melissa Bashardoust</p>
+                            <button class="buyBtn bold">
+                                124 kr <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="book flex center">
+                        <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                                alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                        <div class="column">
+                            <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                            <p class="underline">Melissa Bashardoust</p>
+                            <button class="buyBtn bold">
+                                124 kr <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="book flex center">
+                        <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                                alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                        <div class="column">
+                            <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                            <p class="underline">Melissa Bashardoust</p>
+                            <button class="buyBtn bold">
+                                124 kr <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="categoryBooks">
                 <div class="book column center">
-                    <a href="book.html"><img src="/images/we-were-liars.jpg" alt="Bok omslag för We were liars" /></a>
-                    <a href="book.html" class="title">We were liars</a>
-                    <a href="" class="author">E. Lockhart</a>
-                    <button class="buyBtn">
-                        100 kr <i class="fas fa-shopping-cart"></i>
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
                     </button>
                 </div>
-                <button>Visa fler</button>
-            </div>
-            <div class="flex">
-                <h2>Topplista</h2>
-                <div class="book flex">
-                    <a href="book.html"><img src="/images/we-were-liars.jpg" alt="Bok omslag för We were liars" /></a>
-                    <div class="column center">
-                        <a href="book.html" class="title">We were liars</a>
-                        <a href="" class="author">E. Lockhart</a>
-                        <button class="buyBtn">
-                            100 kr <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
                 </div>
-                <div class="book flex">
-                    <a href="book.html"><img src="/images/we-were-liars.jpg" alt="Bok omslag för We were liars" /></a>
-                    <div class="column center">
-                        <a href="book.html" class="title">We were liars</a>
-                        <a href="" class="author">E. Lockhart</a>
-                        <button class="buyBtn">
-                            100 kr <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
                 </div>
-                <div class="book flex">
-                    <a href="book.html"><img src="/images/we-were-liars.jpg" alt="Bok omslag för We were liars" /></a>
-                    <div class="column center">
-                        <a href="book.html" class="title">We were liars</a>
-                        <a href="" class="author">E. Lockhart</a>
-                        <button class="buyBtn">
-                            100 kr <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
                 </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="book column center">
+                    <a href="book.html"><img src="/images/girl-serpent-thorn.jpg"
+                            alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+                    <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                    <p class="underline">Melissa Bashardoust</p>
+                    <button class="buyBtn bold">
+                        124 kr <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <button class="searchBar showMore">Visa fler</button>
             </div>
         </div>
     </main>
-<footer>
-    <div class="column logo">
-        <a href="#" class="top">KLACKENBERGS</a>
-        <a href="#" class="bottom">BÖCKER & PAPPER</a>
-    </div>
-    <div class="column">
-        <p class="big">Om oss</p>
-        <p class="underline">Butiker</p>
-        <p class="underline">Hållbarhet</p>
-        <p class="underline">Jobba hos oss</p>
-        <p class="underline">Press</p>
-    </div>
-    <div class="column">
-        <p class="big">Kundtjänst</p>
-        <p class="underline">Kontakt</p>
-        <p class="underline">Frakt information</p>
-        <p class="underline">Köpvillkor</p>
-        <p class="underline">Vanliga frågor och svar</p>
-    </div>
-    <div class="column">
-        <p class="big">Följ oss</p>
-        <a href="https://www.instagram.com/klackenbergsvarmdo/?hl=sv"><i
-                class="fab fa-instagram-square"></i>Instagram</a>
-        <a
-            href="https://www.facebook.com/klackenbergsvarmdo/?hc_ref=ARQJJ3b0lTfEgjlpxh5wPK6ThfGRYDz0MYFkT__IaAQhqNZ8p0ih3qm9nLhreyDQ4Gc&fref=nf&__tn__=kC-R"><i
-                class="fab fa-facebook-square"></i>Facebook
-        </a>
-    </div>
-</footer>
+    <footer>
+        <div class="column logo">
+            <a href="#" class="top">KLACKENBERGS</a>
+            <a href="#" class="bottom">BÖCKER & PAPPER</a>
+        </div>
+        <div class="column">
+            <p class="big">Om oss</p>
+            <p class="underline">Butiker</p>
+            <p class="underline">Hållbarhet</p>
+            <p class="underline">Jobba hos oss</p>
+            <p class="underline">Press</p>
+        </div>
+        <div class="column">
+            <p class="big">Kundtjänst</p>
+            <p class="underline">Kontakt</p>
+            <p class="underline">Frakt information</p>
+            <p class="underline">Köpvillkor</p>
+            <p class="underline">Vanliga frågor och svar</p>
+        </div>
+        <div class="column">
+            <p class="big">Följ oss</p>
+            <a href="https://www.instagram.com/klackenbergsvarmdo/?hl=sv"><i
+                    class="fab fa-instagram-square"></i>Instagram</a>
+            <a
+                href="https://www.facebook.com/klackenbergsvarmdo/?hc_ref=ARQJJ3b0lTfEgjlpxh5wPK6ThfGRYDz0MYFkT__IaAQhqNZ8p0ih3qm9nLhreyDQ4Gc&fref=nf&__tn__=kC-R"><i
+                    class="fab fa-facebook-square"></i>Facebook
+            </a>
+        </div>
+    </footer>
 </body>
 
 </html>
