@@ -335,6 +335,10 @@ footer .logo a {
   align-self: start;
 }
 
+.categoryToplist p, .categoryToplist a, .categoryToplist h2 {
+  color: white;
+}
+
 .bookPage {
   margin: 2vw;
   display: grid;

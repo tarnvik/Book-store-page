@@ -11,7 +11,6 @@
     crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Rosario:wght@500;700&display=swap"
     rel="stylesheet">
-
 </head>
 
 <body>
@@ -21,11 +20,11 @@
       <a href="index.html" class="bottom">BÖCKER&PAPPER</a>
     </div>
 
-    <div class="smallMenu spaceBetween">
+    <section class="smallMenu spaceBetween">
       <p class="underline">Kundtjänst</p>
       <p class="underline">Mina sidor<i class="fas fa-user"></i></p>
       <p class="underline">Kundvagn<i class="fas fa-shopping-cart"></i></p>
-    </div>
+    </section>
 
     <input class="searchBar" placeholder="Sök (titlar, författare, ämnen...)" />
 
@@ -59,18 +58,16 @@
       };
     </script>
 
-    <div class="mobileMenu">
-      <nav id="sidepanel" class="sidepanel column">
-        <a href="javascript:void(0)" class="closebtn big" onclick="closeNav()">×</a>
-        <p class="heading">Böcker</p>
-        <a href="category.html" class="heading">Ungdom</a>
-        <p class="heading">Papper</p>
-        <p class="heading">Topplistor</p>
-        <a href="stores.html" class="heading">Butiker och öppettider</a>
-        <p class="heading">Evenemang</p>
-        <p class="heading">Bli medlem</p>
-      </nav>
-    </div>
+    <nav id="sidepanel" class="sidepanel column mobileMenu">
+      <a href="javascript:void(0)" class="closebtn big" onclick="closeNav()">×</a>
+      <p class="heading">Böcker</p>
+      <a href="category.html" class="heading">Ungdom</a>
+      <p class="heading">Papper</p>
+      <p class="heading">Topplistor</p>
+      <a href="stores.html" class="heading">Butiker och öppettider</a>
+      <p class="heading">Evenemang</p>
+      <p class="heading">Bli medlem</p>
+    </nav>
     <button class="openBtn center" onclick="openNav()">☰</button>
 
     <script>
@@ -85,13 +82,13 @@
   </header>
 
   <main class="first-page">
-    <div class="slideShow center">
+    <section class="slideShow center">
       <img class="slide" src="images/erbjudande-pocket.jpg" alt="Erbjudande för alla pocket böcker, 3 för 2" />
       <img class="slide" src="images/erbjudande-jul.jpg" alt="Erbjudande för julklappar" />
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
+    </section>
 
     <script>
       var slideIndex = 1;
@@ -116,59 +113,60 @@
         x[slideIndex - 1].style.display = "block";
       }
     </script>
+    <article>
+      <h2 class="heading toplist">Topplistan för böcker</h2>
+      <div class="scrollGrid">
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpf" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpf" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
 
-    <h2 class="heading toplist">Topplistan</h2>
-    <div class="scrollGrid">
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
       </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-    </div>
-
+    </article>
     <h2 class="heading toplist">Personalen tipsar</h2>
     <div class="autoGrid">
       <div class="tip flex">
@@ -206,82 +204,82 @@
       </div>
     </div>
 
-    <h2 class="heading toplist">Populära julklappar</h2>
-    <div class="scrollGrid">
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="book column center">
-        <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
-        <a href="book.html" class="big">Girl, Serpent, Thorn</a>
-        <p class="underline">Melissa Bashardoust</p>
-        <button class="buyBtn bold">
-          124 kr <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-    </div>
+    <article>
+      <h2 class="heading toplist">Populära böcker till julklappar</h2>
+      <div class="scrollGrid">
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
+        <article class="book column center">
+          <a href="book.html"><img src="images/girl-serpent-thorn.jpg" alt="Bokomslag för Girl, Serpent, Thorn" /></a>
+          <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
+          <p class="underline">Melissa Bashardoust</p>
+          <button class="buyBtn bold">
+            124 kr <i class="fas fa-shopping-cart"></i>
+          </button>
+        </article>
 
-    <h2 class="heading toplist">Evenemang</h2>
-    <div class="grid">
-      <div class="evenemang column center">
-        <p class="heading">20 nov</p>
-        <p class="bold">Borås</p>
-        <p class="big">15:00</p>
-        <p class="bold">Författar träff</p>
-        <p class="small">Kolla här är det mer information om evenemang saken, låtsas vi.</p>
-      </div>
-      <div class="evenemang column center">
-        <p class="heading">20 nov</p>
-        <p class="bold">Borås</p>
-        <p class="big">15:00</p>
-        <p class="bold">Författar träff</p>
-        <p class="small">Kolla här är det mer information om evenemang saken, låtsas vi.</p>
-      </div>
-      <div class="evenemang column center">
-        <p class="heading">20 nov</p>
-        <p class="bold">Borås</p>
-        <p class="big">15:00</p>
-        <p class="bold">Författar träff</p>
-        <p class="small">Kolla här är det mer information om evenemang saken, låtsas vi.</p>
-      </div>
-    </div>
+        <h2 class="heading toplist">Evenemang</h2>
+        <div class="grid">
+          <div class="evenemang column center">
+            <p class="heading">20 nov</p>
+            <p class="bold">Borås</p>
+            <p class="big">15:00</p>
+            <p class="bold">Författar träff</p>
+            <p class="small">Kolla här är det mer information om evenemang saken, låtsas vi.</p>
+          </div>
+          <div class="evenemang column center">
+            <p class="heading">20 nov</p>
+            <p class="bold">Borås</p>
+            <p class="big">15:00</p>
+            <p class="bold">Författar träff</p>
+            <p class="small">Kolla här är det mer information om evenemang saken, låtsas vi.</p>
+          </div>
+          <div class="evenemang column center">
+            <p class="heading">20 nov</p>
+            <p class="bold">Borås</p>
+            <p class="big">15:00</p>
+            <p class="bold">Författar träff</p>
+            <p class="small">Kolla här är det mer information om evenemang saken, låtsas vi.</p>
+          </div>
+        </div>
   </main>
   <footer>
     <div class="column logo">
