@@ -21,20 +21,22 @@
             <a href="index.html" class="bottom">BÖCKER&PAPPER</a>
         </div>
 
-        <div class="smallMenu spaceBetween">
+        <section class="smallMenu spaceBetween">
             <p class="underline">Kundtjänst</p>
             <p class="underline">Mina sidor<i class="fas fa-user"></i></p>
             <p class="underline">Kundvagn<i class="fas fa-shopping-cart"></i></p>
-        </div>
+        </section>
 
         <input class="searchBar" placeholder="Sök (titlar, författare, ämnen...)" />
 
         <nav class="bigMenu spaceAround">
-            <button class="dropBtn heading" onclick="dropdown()">Böcker</button>
-            <div class="dropdownContent" id="dropdown">
-                <p class="heading">Ämnen</p>
-                <a href="category.html" class="heading">Ungdom</a>
-                <p class="heading">Egentligen ska det vara fler kategorier här...</p>
+            <div class="dropdown">
+                <button onclick="dropdown()" class="dropBtn heading">Böcker</button>
+                <div class="dropdownContent" id="dropdown">
+                    <p class="heading">Ämnen</p>
+                    <a href="category.html" class="heading">Ungdom</a>
+                    <p class="heading">Egentligen ska det vara fler kategorier här...</p>
+                </div>
             </div>
             <p class="heading">Papper</p>
             <p class="heading">Topplistor</p>
@@ -57,18 +59,16 @@
             };
         </script>
 
-        <div class="mobileMenu">
-            <nav id="sidepanel" class="sidepanel column">
-                <a href="javascript:void(0)" class="closebtn big" onclick="closeNav()">×</a>
-                <p class="heading">Böcker</p>
-                <a href="category.html" class="heading">Ungdom</a>
-                <p class="heading">Papper</p>
-                <p class="heading">Topplistor</p>
-                <a href="stores.html" class="heading">Butiker och öppettider</a>
-                <p class="heading">Evenemang</p>
-                <p class="heading">Bli medlem</p>
-            </nav>
-        </div>
+        <nav id="sidepanel" class="sidepanel column mobileMenu">
+            <a href="javascript:void(0)" class="closebtn big" onclick="closeNav()">×</a>
+            <p class="heading">Böcker</p>
+            <a href="category.html" class="heading">Ungdom</a>
+            <p class="heading">Papper</p>
+            <p class="heading">Topplistor</p>
+            <a href="stores.html" class="heading">Butiker och öppettider</a>
+            <p class="heading">Evenemang</p>
+            <p class="heading">Bli medlem</p>
+        </nav>
         <button class="openBtn center" onclick="openNav()">☰</button>
 
         <script>
@@ -83,60 +83,66 @@
     </header>
 
     <main class="category">
-        <h1 class="bigHeading">Ungdomsböcker</h1>
-        <p class="normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, atque corrupti tempore ipsa
-            molestiae tempora
-            cupiditate! Reiciendis sed totam dolores assumenda sit odio excepturi incidunt! At, possimus laborum
-            provident molestiae omnis sequi facilis error quo iusto? Porro beatae fugiat esse rerum, repudiandae culpa,
-            in minus suscipit facere minima dolores! Eaque, fuga! Alias dolorum minima quasi corrupti quia suscipit
-            necessitatibus, consequuntur nemo reiciendis non. Debitis, deserunt. Debitis magnam temporibus consectetur
-            sequi, numquam quidem deserunt ad iste molestiae incidunt animi culpa tenetur vero inventore quas tempora,
-            dolorum aliquid deleniti eligendi laborum! Magni iusto porro sequi animi amet voluptatum perferendis
-            distinctio sapiente laborum.</p>
+        <section>
+            <h1 class="bigHeading">Ungdomsböcker</h1>
+            <p class="normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, atque corrupti tempore
+                ipsa
+                molestiae tempora
+                cupiditate! Reiciendis sed totam dolores assumenda sit odio excepturi incidunt! At, possimus laborum
+                provident molestiae omnis sequi facilis error quo iusto? Porro beatae fugiat esse rerum, repudiandae
+                culpa,
+                in minus suscipit facere minima dolores! Eaque, fuga! Alias dolorum minima quasi corrupti quia suscipit
+                necessitatibus, consequuntur nemo reiciendis non. Debitis, deserunt. Debitis magnam temporibus
+                consectetur
+                sequi, numquam quidem deserunt ad iste molestiae incidunt animi culpa tenetur vero inventore quas
+                tempora,
+                dolorum aliquid deleniti eligendi laborum! Magni iusto porro sequi animi amet voluptatum perferendis
+                distinctio sapiente laborum.</p>
+        </section>
         <div class="toplist spaceBetween">
             <input class="searchBar" placeholder="Sök(I kategori)">
             <button class="searchBar">Filtrera <i class="fas fa-sort-down"></i>
             </button>
         </div>
         <div class="categoryGrid">
-            <div class="column toplist categoryToplist">
+            <article class="column toplist categoryToplist">
                 <h2 class="heading">Topplista</h2>
                 <div class="toplistBooks">
-                    <div class="book flex center">
+                    <article class="book flex center">
                         <a href="book.html"><img src="images/girl-serpent-thorn.jpg"
                                 alt="Bokomslag för Girl, Serpent, Thorn" /></a>
                         <div class="column">
-                            <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                            <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
                             <p class="underline">Melissa Bashardoust</p>
                             <button class="buyBtn bold">
                                 124 kr <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
-                    </div>
-                    <div class="book flex center">
+                    </article>
+                    <article class="book flex center">
                         <a href="book.html"><img src="images/girl-serpent-thorn.jpg"
                                 alt="Bokomslag för Girl, Serpent, Thorn" /></a>
                         <div class="column">
-                            <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                            <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
                             <p class="underline">Melissa Bashardoust</p>
                             <button class="buyBtn bold">
                                 124 kr <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
-                    </div>
-                    <div class="book flex center">
+                    </article>
+                    <article class="book flex center">
                         <a href="book.html"><img src="images/girl-serpent-thorn.jpg"
                                 alt="Bokomslag för Girl, Serpent, Thorn" /></a>
                         <div class="column">
-                            <a href="book.html" class="big">Girl, Serpent, Thorn</a>
+                            <h3 href="book.html" class="big">Girl, Serpent, Thorn</h3>
                             <p class="underline">Melissa Bashardoust</p>
                             <button class="buyBtn bold">
                                 124 kr <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
-                    </div>
+                    </article>
                 </div>
-            </div>
+            </article>
             <div class="categoryBooks">
                 <div class="book column center">
                     <a href="book.html"><img src="images/girl-serpent-thorn.jpg"
@@ -219,21 +225,24 @@
             <a href="#" class="top">KLACKENBERGS</a>
             <a href="#" class="bottom">BÖCKER & PAPPER</a>
         </div>
-        <div class="column">
+
+        <section class="column">
             <p class="big">Om oss</p>
             <p class="underline">Butiker</p>
             <p class="underline">Hållbarhet</p>
             <p class="underline">Jobba hos oss</p>
             <p class="underline">Press</p>
-        </div>
-        <div class="column">
+        </section>
+
+        <section class="column">
             <p class="big">Kundtjänst</p>
             <p class="underline">Kontakt</p>
             <p class="underline">Frakt information</p>
             <p class="underline">Köpvillkor</p>
             <p class="underline">Vanliga frågor och svar</p>
-        </div>
-        <div class="column">
+        </section>
+
+        <section class="column">
             <p class="big">Följ oss</p>
             <a href="https://www.instagram.com/klackenbergsvarmdo/?hl=sv"><i
                     class="fab fa-instagram-square"></i>Instagram</a>
@@ -241,7 +250,8 @@
                 href="https://www.facebook.com/klackenbergsvarmdo/?hc_ref=ARQJJ3b0lTfEgjlpxh5wPK6ThfGRYDz0MYFkT__IaAQhqNZ8p0ih3qm9nLhreyDQ4Gc&fref=nf&__tn__=kC-R"><i
                     class="fab fa-facebook-square"></i>Facebook
             </a>
-        </div>
+        </section>
+
     </footer>
 </body>
 
